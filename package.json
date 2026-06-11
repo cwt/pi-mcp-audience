@@ -1,0 +1,47 @@
+{
+  "name": "pi-mcp-audience",
+  "version": "0.1.0",
+  "description": "Filter MCP content based on audience annotations for the Pi coding agent — hide content not intended for the user",
+  "type": "module",
+  "keywords": [
+    "pi-package",
+    "pi-extension",
+    "mcp",
+    "audience",
+    "annotations",
+    "model-context-protocol"
+  ],
+  "author": "cwt114",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cwt/pi-mcp-audience.git"
+  },
+  "homepage": "https://github.com/cwt/pi-mcp-audience",
+  "bugs": {
+    "url": "https://github.com/cwt/pi-mcp-audience/issues"
+  },
+  "files": [
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "test": "node --import tsx/esm --test ./tests/*.test.ts",
+    "test:audience": "npm test -- ./tests/audience-filter.test.ts"
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+*.tgz
+.env
+
+.pi/
+
+# Pathfinder LSP cache isolation
+.pathfinder/
